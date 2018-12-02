@@ -1,0 +1,31 @@
+---
+title: "Assignment for Data Products"
+author: "Huyen Pham"
+date: "2 December 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+Create a web page using R Markdown that features a map created with Leaflet.
+
+Host the webpage on either GitHub Pages.
+
+```{r}
+install.packages('leaflet')
+library(leaflet)
+```
+
+## Creating Map for my Home
+
+```{r}
+
+my_map <- leaflet() %>% addTiles() 
+my_map <- my_map %>% addMarkers(lat=19.269664, lng=  72.58040, popup="My Sweet Home")
+my_map
+```
+
+
